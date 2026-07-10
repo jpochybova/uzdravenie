@@ -1,0 +1,12 @@
+# Local-only project context / notes — never publish to the public repo
+CLAUDE.md
+NOTES.md
+/notes/
+/private/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

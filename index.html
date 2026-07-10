@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ✏️ SEO: page title & description (shown in Google + browser tab) -->
+  <title>uzdravenie — Vedomá cesta k harmónii | Holistické sprevádzanie</title>
+  <meta name="description" content="Holistické sprevádzanie na ceste k vnútornej harmónii a rovnováhe tela, mysle a životného priestoru. Individuálne sedenia osobne aj online.">
+  <meta name="author" content="uzdravenie">
+  <!-- ⚙️ GO-LIVE: this is the PREVIEW site (nove.uzdravenie.sk). When approved and
+       moved to uzdravenie.sk, change robots to "index, follow", update the canonical
+       and og/twitter URLs to https://uzdravenie.sk/, and see README "Go-live switch". -->
+  <link rel="canonical" href="https://nove.uzdravenie.sk/">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#2d5016">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <!-- Open Graph / social sharing previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sk_SK">
+  <meta property="og:url" content="https://nove.uzdravenie.sk/">
+  <meta property="og:site_name" content="uzdravenie">
+  <meta property="og:title" content="uzdravenie — Vedomá cesta k harmónii">
+  <meta property="og:description" content="Holistické sprevádzanie na ceste k vnútornej harmónii a rovnováhe tela, mysle a životného priestoru.">
+  <meta property="og:image" content="https://nove.uzdravenie.sk/images/hero-nature-misty-forest.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="uzdravenie — Vedomá cesta k harmónii">
+  <meta name="twitter:description" content="Holistické sprevádzanie na ceste k vnútornej harmónii a rovnováhe tela, mysle a životného priestoru.">
+  <meta name="twitter:image" content="https://nove.uzdravenie.sk/images/hero-nature-misty-forest.webp">
+
+  <!-- ===========================================================
+       Google Analytics 4 with Consent Mode v2
+       ⚙️ SET-UP: replace BOTH "G-XXXXXXXXXX" below with your real
+       GA4 Measurement ID. Analytics stays OFF until the visitor
+       accepts cookies (see the cookie banner at the bottom).
+       =========================================================== -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // default: everything denied until the user consents
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <!-- ✏️ TEXT: brand name (top-left) -->
+      <a href="#uvod" class="nav__logo">uzdravenie</a>
+
+      <!-- ✏️ TEXT: menu links -->
+      <div class="nav__links">
+        <a href="#uvod" class="nav__link">Úvod</a>
+        <a href="#o-mne" class="nav__link">O mne</a>
+        <a href="#metody" class="nav__link">Metódy</a>
+        <a href="#cennik" class="nav__link">Cenník</a>
+        <a href="#kontakt" class="nav__link">Kontakt</a>
+        <a href="#kontakt" class="btn btn--primary btn--pill">Objednať</a>
+      </div>
+
+      <button type="button" class="nav__burger" id="nav-burger" aria-label="Otvoriť menu" aria-expanded="false" aria-controls="nav-mobile">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div class="nav__mobile" id="nav-mobile">
+      <a href="#uvod" class="nav__mobile-link">Úvod</a>
+      <a href="#o-mne" class="nav__mobile-link">O mne</a>
+      <a href="#metody" class="nav__mobile-link">Metódy</a>
+      <a href="#cennik" class="nav__mobile-link">Cenník</a>
+      <a href="#kontakt" class="nav__mobile-link">Kontakt</a>
+      <a href="#kontakt" class="btn btn--primary btn--pill nav__mobile-cta">Objednať</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="uvod" class="hero">
+    <div class="hero__bg" style="background-image:url('images/hero-nature-misty-forest.webp')"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <!-- ✏️ TEXT: hero eyebrow / title / subtitle -->
+      <p class="hero__eyebrow">Holistické sprevádzanie</p>
+      <h1 class="hero__title">Vedomá cesta<br><span class="hero__title-accent">k harmónii</span></h1>
+      <p class="hero__lead">Harmónia tela, mysle a životného priestoru. Sprevádzam vás na ceste k vnútornému pokoju a celostnej rovnováhe.</p>
+      <!-- ✏️ TEXT: hero buttons -->
+      <div class="hero__actions">
+        <a href="#kontakt" class="btn btn--gold btn--pill btn--lg">Objednať konzultáciu</a>
+        <a href="#o-mne" class="btn btn--ghost btn--pill btn--lg">Spoznať môj prístup</a>
+      </div>
+      <!-- ✏️ TEXT: hero badges -->
+      <div class="hero__pills">
+        <span class="pill"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg> Individuálny prístup</span>
+        <span class="pill"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg> Osobne aj online</span>
+        <span class="pill"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg> Citlivé sprevádzanie</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== O MNE ===== -->
+  <section id="o-mne" class="section section--white">
+    <div class="container">
+      <div class="about">
+        <div class="about__media">
+          <div class="about__photo">
+            <!-- ✏️ IMAGE: portrait (replace images/about-portrait.webp) -->
+            <img src="images/about-portrait.webp" alt="Terapeutka" width="820" height="1093" loading="lazy">
+          </div>
+          <span class="about__blob about__blob--gold"></span>
+          <span class="about__blob about__blob--green"></span>
+        </div>
+        <div class="about__body">
+          <!-- ✏️ TEXT: "O mne" section -->
+          <p class="eyebrow">O mne</p>
+          <h2 class="heading">Sprevádzam vás s úctou a porozumením</h2>
+          <div class="about__text">
+            <p>Moju prácu vnímam ako citlivé sprevádzanie človeka k väčšiemu porozumeniu sebe samému.</p>
+            <p>Spájam celostný prístup, rešpekt, bezpečie a individuálne potreby každého klienta.</p>
+          </div>
+          <a href="#o-mne" class="btn btn--outline btn--pill">Prečo robím, to čo robím</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARALLAX BAND ===== -->
+  <section class="band">
+    <img src="images/hero-nature-path-journey.webp" alt="Cesta k uzdraveniu" class="band__img" loading="lazy">
+    <div class="band__overlay"></div>
+    <div class="band__center">
+      <!-- ✏️ TEXT: quote band -->
+      <p class="band__quote">Každá cesta začína prvým krokom</p>
+    </div>
+  </section>
+
+  <!-- ===== METÓDY ===== -->
+  <section id="metody" class="section section--cream">
+    <div class="container">
+      <div class="methods__head">
+        <div>
+          <!-- ✏️ TEXT: "Metódy" intro -->
+          <p class="eyebrow">Metódy</p>
+          <h2 class="heading">Ako pracujem</h2>
+          <p class="muted">Každá metóda je nástrojom na ceste k vašej vnútornej rovnováhe. Kombináciu prispôsobím vašim potrebám.</p>
+        </div>
+        <div class="methods__head-img">
+          <img src="images/methods-healing-energy-hands.webp" alt="Liečivá energia" loading="lazy">
+        </div>
+      </div>
+
+      <!-- ✏️ TEXT: method cards (title + description of each) -->
+      <div class="methods__grid">
+        <article class="card card--soft">
+          <div class="icon-circle icon-circle--green">
+            <svg class="ico ico--lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+          </div>
+          <h3 class="card__title">Práca s emóciami</h3>
+          <p class="card__text">Bezpečné sprevádzanie pri uvoľňovaní zablokovaných emócií a starých vzorcov, ktoré vám bránia žiť naplno.</p>
+        </article>
+
+        <article class="card card--soft">
+          <div class="icon-circle icon-circle--green">
+            <svg class="ico ico--lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg>
+          </div>
+          <h3 class="card__title">Vnútorné vzorce</h3>
+          <p class="card__text">Rozpoznanie a transformácia opakujúcich sa vzorcov v myslení a správaní, ktoré obmedzujú váš potenciál.</p>
+        </article>
+
+        <article class="card card--soft">
+          <div class="icon-circle icon-circle--green">
+            <svg class="ico ico--lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"></path><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"></path><path d="M9.8 4.4A2 2 0 1 1 11 8H2"></path></svg>
+          </div>
+          <h3 class="card__title">Energetická práca</h3>
+          <p class="card__text">Jemná práca s energetickým systémom tela pre obnovenie prirodzeného toku a vitality.</p>
+        </article>
+
+        <article class="card card--soft">
+          <div class="icon-circle icon-circle--green">
+            <svg class="ico ico--lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+          </div>
+          <h3 class="card__title">Priestorová harmónia</h3>
+          <p class="card__text">Harmonizácia vášho životného a pracovného priestoru pre podporu vnútorného pokoja a pohody.</p>
+        </article>
+      </div>
+
+      <div class="methods__foot">
+        <img src="images/methods-zen-balance-stones.webp" alt="Zen kamene v rovnováhe" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CENNÍK ===== -->
+  <section id="cennik" class="section section--white">
+    <div class="container">
+      <div class="center-head">
+        <!-- ✏️ TEXT: "Cenník" intro -->
+        <p class="eyebrow">Cenník</p>
+        <h2 class="heading">Investícia do seba</h2>
+        <p class="muted muted--center">Vyberte si formát, ktorý vám vyhovuje. Všetky konzultácie sú dostupné osobne aj online.</p>
+        <div class="pricing__hero">
+          <img src="images/pricing-meditation-wellness.webp" alt="Meditácia a wellness" loading="lazy">
+        </div>
+      </div>
+
+      <!-- ✏️ TEXT: pricing cards — titles, descriptions, PRICES and durations -->
+      <div class="pricing__grid">
+        <article class="price-card">
+          <div class="icon-circle icon-circle--cream">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h3 class="price-card__title">Úvodná konzultácia</h3>
+          <p class="price-card__desc">Zoznámenie sa, mapovanie vašej situácie a návrh ďalšieho postupu.</p>
+          <div class="price-card__price"><span class="price">30 €</span><span class="price__note">45 minút</span></div>
+          <a href="#kontakt" class="btn btn--outline btn--pill btn--block">Objednať sa</a>
+        </article>
+
+        <article class="price-card price-card--featured">
+          <div class="price-card__badge">Najobľúbenejšie</div>
+          <div class="icon-circle icon-circle--green">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+          </div>
+          <h3 class="price-card__title">Individuálne sedenie</h3>
+          <p class="price-card__desc">Hlboká práca prispôsobená vašim aktuálnym potrebám a témam.</p>
+          <div class="price-card__price"><span class="price">60 €</span><span class="price__note">75 minút</span></div>
+          <a href="#kontakt" class="btn btn--primary btn--pill btn--block">Objednať sa</a>
+        </article>
+
+        <article class="price-card">
+          <div class="icon-circle icon-circle--gold">
+            <svg class="ico ico--gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg>
+          </div>
+          <h3 class="price-card__title">Balíček 5 sedení</h3>
+          <p class="price-card__desc">Pre hlbšiu a kontinuálnu prácu. Ušetríte 50 € oproti jednotlivým sedeniam.</p>
+          <div class="price-card__price"><span class="price">250 €</span><span class="price__note">5 × 75 minút</span></div>
+          <a href="#kontakt" class="btn btn--outline btn--pill btn--block">Objednať sa</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KONTAKT ===== -->
+  <section id="kontakt" class="section section--cream">
+    <div class="container">
+      <div class="center-head">
+        <!-- ✏️ TEXT: "Kontakt" intro -->
+        <p class="eyebrow">Kontakt</p>
+        <h2 class="heading">Napíšte mi</h2>
+        <p class="muted muted--center">Rád/a zodpoviem vaše otázky alebo sa dohodneme na termíne konzultácie.</p>
+      </div>
+
+      <div class="contact">
+        <div class="card contact__form-card">
+          <!-- ===========================================================
+               Contact form → Formspree
+               ⚙️ SET-UP: replace YOUR_FORM_ID in the action below with
+               your Formspree form ID (https://formspree.io).
+               =========================================================== -->
+          <form class="contact__form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="field">
+              <label for="name">Meno</label>
+              <input type="text" id="name" name="meno" placeholder="Vaše meno" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="vas@email.sk" required>
+            </div>
+            <div class="field">
+              <label for="message">Správa</label>
+              <textarea id="message" name="sprava" rows="4" placeholder="Napíšte mi, s čím vám môžem pomôcť..." required></textarea>
+            </div>
+            <!-- anti-spam honeypot (hidden from people, catches bots) -->
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+            <!-- GDPR consent -->
+            <label class="consent-check">
+              <input type="checkbox" name="suhlas" required>
+              <span>Súhlasím so spracovaním osobných údajov v súlade so <a href="privacy.html">zásadami ochrany osobných údajov</a>.</span>
+            </label>
+            <button type="submit" class="btn btn--primary btn--pill btn--block btn--lg">Odoslať správu</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="contact__side">
+          <div class="contact__img">
+            <img src="images/contact-consultation-space.webp" alt="Priestor pre konzultácie" loading="lazy">
+          </div>
+          <!-- ✏️ TEXT: contact details (email, phone, address, hours) -->
+          <div class="contact__info">
+            <div class="contact__item">
+              <div class="icon-circle icon-circle--green icon-circle--sm">
+                <svg class="ico ico--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              </div>
+              <div><p class="contact__label">Email</p><p class="contact__value"><a href="mailto:info@uzdravenie.sk">info@uzdravenie.sk</a></p></div>
+            </div>
+            <div class="contact__item">
+              <div class="icon-circle icon-circle--green icon-circle--sm">
+                <svg class="ico ico--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div><p class="contact__label">Telefón</p><p class="contact__value"><a href="tel:+421900123456">+421 900 123 456</a></p></div>
+            </div>
+            <div class="contact__item">
+              <div class="icon-circle icon-circle--green icon-circle--sm">
+                <svg class="ico ico--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div><p class="contact__label">Adresa</p><p class="contact__value">Bratislava, Slovensko</p></div>
+            </div>
+            <div class="contact__item">
+              <div class="icon-circle icon-circle--green icon-circle--sm">
+                <svg class="ico ico--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <div><p class="contact__label">Otváracie hodiny</p><p class="contact__value">Po – Pi: 9:00 – 18:00</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <!-- ✏️ TEXT: footer brand + tagline -->
+          <h3 class="footer__brand">uzdravenie</h3>
+          <p class="footer__about">Sprevádzam ľudí na ceste k vnútornej harmónii a rovnováhe tela, mysle a životného priestoru.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Navigácia</h4>
+          <ul class="footer__list">
+            <li><a href="#uvod">Úvod</a></li>
+            <li><a href="#o-mne">O mne</a></li>
+            <li><a href="#metody">Metódy</a></li>
+            <li><a href="#cennik">Cenník</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Kontakt</h4>
+          <!-- ✏️ TEXT: footer contact details -->
+          <div class="footer__contact">
+            <p>info@uzdravenie.sk</p>
+            <p>+421 900 123 456</p>
+            <p>Bratislava, Slovensko</p>
+          </div>
+          <div class="footer__social">
+            <!-- ✏️ LINK: social profiles (replace href="#") -->
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 uzdravenie. Všetky práva vyhradené.</p>
+        <div class="footer__bottom-links">
+          <a href="privacy.html">Ochrana osobných údajov</a>
+          <button type="button" class="footer__cookie-btn" id="cookie-settings">Nastavenia cookies</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== COOKIE CONSENT BANNER ===== -->
+  <div class="cookie" id="cookie-banner" hidden>
+    <div class="cookie__inner">
+      <p class="cookie__text">
+        Táto stránka používa súbory cookie na anonymnú analýzu návštevnosti.
+        Viac v <a href="privacy.html">zásadách ochrany osobných údajov</a>.
+      </p>
+      <div class="cookie__actions">
+        <button type="button" class="btn btn--outline btn--pill" id="cookie-decline">Odmietnuť</button>
+        <button type="button" class="btn btn--primary btn--pill" id="cookie-accept">Prijať</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
