@@ -573,6 +573,12 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.15; }
 .page a { color: var(--green-700); text-decoration: underline; }
 .page .page__updated { font-size: .85rem; color: rgba(44,44,44,.5); margin-bottom: 2rem; }
 .page .btn { text-decoration: none; margin-top: 1.5rem; }
+/* buttons/back-link keep their own colours (override the generic .page a rule) */
+.page a.btn { text-decoration: none; }
+.page .btn--primary, .page .btn--gold,
+.page .btn--primary:hover, .page .btn--gold:hover { color: #fff; }
+.page a.subpage__back { text-decoration: none; color: var(--green-700); }
+.page a.subpage__back:hover { color: var(--green-900); }
 
 .page--center { text-align: center; min-height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
 
@@ -587,3 +593,77 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.15; }
 .page-header .nav__logo { color: var(--green-900); }
 .page-header a.back { font-size: .875rem; font-weight: 500; color: rgba(44,44,44,.8); }
 .page-header a.back:hover { color: var(--green-900); }
+
+/* ============================================================
+   SUBPAGES (o-mne, metódy, cenník, method details)
+   Full site nav, but always in the "solid" state because there
+   is no hero behind it.
+   ============================================================ */
+.nav--solid {
+  background: rgba(245,240,232,.9);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom-color: rgba(237,228,211,.7);
+  box-shadow: 0 1px 12px rgba(45,80,22,.06);
+}
+.nav--solid .nav__logo { color: var(--green-900); }
+.nav--solid .nav__link { color: rgba(44,44,44,.8); }
+.nav--solid .nav__link:hover { color: var(--green-900); }
+.nav--solid .nav__burger { color: var(--ink); }
+
+.subpage { padding: 7rem 0 5rem; }
+@media (min-width: 768px) { .subpage { padding: 9rem 0 6rem; } }
+.subpage__head { text-align: center; max-width: 44rem; margin: 0 auto 3.5rem; }
+.subpage__head .heading { margin-bottom: 1rem; }
+.subpage__back { display: inline-block; margin-bottom: 2rem; font-size: .875rem; color: var(--green-700); }
+.subpage__back:hover { color: var(--green-900); }
+
+/* method overview cards become links */
+a.method-card { text-decoration: none; display: block; }
+a.method-card .card__more {
+  display: inline-block; margin-top: 1rem;
+  font-size: .875rem; font-weight: 500; color: var(--green-700);
+}
+a.method-card:hover .card__more { color: var(--green-900); }
+
+/* cenník overview */
+.cennik-sections { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+@media (min-width: 640px) { .cennik-sections { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .cennik-sections { grid-template-columns: repeat(4, 1fr); } }
+.cennik-section {
+  display: flex; flex-direction: column; text-align: center;
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);
+  padding: 2rem 1.5rem; gap: .75rem;
+}
+.cennik-section h3 { font-size: 1.125rem; font-weight: 600; color: var(--ink); }
+.cennik-section .from { font-size: 1.5rem; font-weight: 700; color: var(--green-900); }
+.cennik-section p { font-size: .875rem; color: rgba(44,44,44,.6); flex: 1; }
+
+.cennik-bundle {
+  margin: 2.5rem auto 0; max-width: 52rem;
+  background: var(--green-900); color: #fff;
+  border-radius: var(--radius-lg); padding: 2rem;
+  text-align: center;
+}
+.cennik-bundle h3 { color: #fff; font-size: 1.25rem; font-weight: 600; margin-bottom: .5rem; }
+.cennik-bundle p { color: rgba(255,255,255,.85); font-size: .9rem; max-width: 40rem; margin: 0 auto .75rem; }
+.cennik-bundle .btn { margin-top: 1rem; }
+
+.cennik-how {
+  margin: 3rem auto 0; max-width: 52rem;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
+  text-align: center;
+}
+.cennik-how span {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: 9999px; padding: .5rem 1.25rem;
+  font-size: .85rem; color: rgba(44,44,44,.7);
+}
+
+/* draft banner for work-in-progress pages */
+.draft-note {
+  max-width: 52rem; margin: 0 auto 2.5rem;
+  background: rgba(201,169,110,.12); border: 1px solid rgba(201,169,110,.4);
+  border-radius: var(--radius); padding: .85rem 1.25rem;
+  font-size: .85rem; color: #8a6d3b; text-align: center;
+}
