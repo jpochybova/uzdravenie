@@ -70,6 +70,8 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.15; }
 @media (min-width: 768px) { .section { padding: 7rem 0; } }
 .section--white { background: var(--white); }
 .section--cream { background: var(--cream); }
+/* offset anchored scrolling so section headings aren't hidden under the fixed nav */
+section[id] { scroll-margin-top: 5.5rem; }
 
 .center-head { text-align: center; margin-bottom: 3.5rem; }
 
@@ -460,7 +462,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.15; }
 .footer__grid {
   display: grid; grid-template-columns: 1fr; gap: 2.5rem;
 }
-@media (min-width: 768px) { .footer__grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 768px) { .footer__grid { grid-template-columns: 2fr 1fr; } }
 .footer__col { display: flex; flex-direction: column; gap: 1rem; }
 .footer__brand { font-size: 1.5rem; font-weight: 600; color: #fff; }
 .footer__about { font-size: .875rem; color: rgba(255,255,255,.7); line-height: 1.7; max-width: 20rem; }
@@ -617,6 +619,11 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.15; }
 .subpage__back { display: inline-block; margin-bottom: 2rem; font-size: .875rem; color: var(--green-700); }
 .subpage__back:hover { color: var(--green-900); }
 
+/* method overview: 3 + 3 grid */
+.method-grid-3 { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+@media (min-width: 640px)  { .method-grid-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .method-grid-3 { grid-template-columns: repeat(3, 1fr); } }
+
 /* method overview cards become links */
 a.method-card { text-decoration: none; display: block; }
 a.method-card .card__more {
@@ -626,18 +633,47 @@ a.method-card .card__more {
 a.method-card:hover .card__more { color: var(--green-900); }
 
 /* cenník overview */
-.cennik-sections { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
-@media (min-width: 640px) { .cennik-sections { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .cennik-sections { grid-template-columns: repeat(4, 1fr); } }
+.cennik-sections { display: grid; grid-template-columns: 1fr; gap: 1.25rem; max-width: 74rem; margin: 0 auto; }
+@media (min-width: 560px)  { .cennik-sections { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 860px)  { .cennik-sections { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1100px) { .cennik-sections { grid-template-columns: repeat(5, 1fr); } }
 .cennik-section {
-  display: flex; flex-direction: column; text-align: center;
+  display: flex; flex-direction: column; text-align: center; color: var(--ink);
   background: #fff; border: 1px solid var(--border);
   border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);
   padding: 2rem 1.5rem; gap: .75rem;
 }
-.cennik-section h3 { font-size: 1.125rem; font-weight: 600; color: var(--ink); }
-.cennik-section .from { font-size: 1.5rem; font-weight: 700; color: var(--green-900); }
+a.cennik-section { text-decoration: none; transition: box-shadow .2s ease; }
+a.cennik-section:hover { box-shadow: var(--shadow-md); }
+.cennik-section h3 { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 600; color: var(--ink); }
+.cennik-section .from { font-size: 1.25rem; font-weight: 700; color: var(--green-900); }
 .cennik-section p { font-size: .875rem; color: rgba(44,44,44,.6); flex: 1; }
+.cennik-section .more { font-size: .875rem; font-weight: 500; color: var(--green-700); margin-top: .25rem; }
+a.cennik-section:hover .more { color: var(--green-900); }
+
+/* program accordion (category detail pages) */
+.programs { max-width: 52rem; margin: 0 auto; }
+.program {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);
+  margin-bottom: 1rem; overflow: hidden;
+}
+.program > summary {
+  cursor: pointer; list-style: none;
+  display: flex; align-items: center; gap: .9rem;
+  padding: 1.2rem 1.5rem;
+}
+.program > summary::-webkit-details-marker { display: none; }
+.program__name { flex: 1; font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; color: var(--ink); }
+.program__meta { color: var(--green-900); font-weight: 700; white-space: nowrap; font-size: .95rem; }
+.program > summary::after { content: "+"; color: var(--green-700); font-size: 1.4rem; line-height: 1; width: 1rem; text-align: center; }
+.program[open] > summary::after { content: "\2013"; }
+.program__body { padding: 0 1.5rem 1.5rem; }
+.program__body p { color: rgba(44,44,44,.75); line-height: 1.7; margin-bottom: 1rem; }
+.program__body h4 { font-weight: 600; color: var(--green-900); margin: 1.25rem 0 .6rem; font-family: var(--font-body); font-size: .95rem; }
+.program__body ul { padding-left: 1.25rem; }
+.program__body li { color: rgba(44,44,44,.75); line-height: 1.6; margin-bottom: .4rem; }
+.program__duration { display: inline-block; font-size: .8rem; font-weight: 600; color: var(--green-700); background: rgba(122,179,98,.12); border-radius: 9999px; padding: .25rem .75rem; margin-bottom: 1rem; }
 
 .cennik-bundle {
   margin: 2.5rem auto 0; max-width: 52rem;
@@ -667,3 +703,85 @@ a.method-card:hover .card__more { color: var(--green-900); }
   border-radius: var(--radius); padding: .85rem 1.25rem;
   font-size: .85rem; color: #8a6d3b; text-align: center;
 }
+
+/* official certification badge */
+.cert-badge {
+  display: inline-flex; align-items: center; gap: .6rem;
+  background: rgba(122,179,98,.12);
+  border: 1px solid rgba(74,124,89,.35);
+  color: var(--green-900);
+  border-radius: 9999px;
+  padding: .55rem 1.1rem;
+  font-size: .9rem; font-weight: 500; line-height: 1.3;
+  margin: .25rem 0 1.75rem;
+}
+.cert-badge svg { width: 18px; height: 18px; color: var(--green-700); flex-shrink: 0; }
+
+/* ============================================================
+   LANDING — additional sections
+   ============================================================ */
+.section-cta { text-align: center; margin-top: 2.5rem; }
+
+/* "S čím vám môžem pomôcť" */
+.help-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+@media (min-width: 640px)  { .help-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .help-grid { grid-template-columns: repeat(3, 1fr); } }
+.help-card {
+  background: #fff; border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm); padding: 1.75rem; text-align: center;
+  transition: box-shadow .2s ease;
+}
+.help-card:hover { box-shadow: var(--shadow-md); }
+.help-card h3 {
+  font-family: var(--font-heading); font-size: 1.05rem; font-weight: 600;
+  color: var(--ink); margin-bottom: .5rem;
+}
+.help-card p { font-size: .9rem; color: rgba(44,44,44,.6); line-height: 1.6; }
+
+/* "Ako prebieha spolupráca" */
+.steps {
+  display: grid; grid-template-columns: 1fr; gap: 1.75rem;
+  max-width: 62rem; margin: 0 auto 2.5rem;
+}
+@media (min-width: 768px) { .steps { grid-template-columns: repeat(4, 1fr); } }
+.step { text-align: center; position: relative; }
+/* arrow connectors between steps (desktop only) */
+@media (min-width: 768px) {
+  .step:not(:last-child)::after {
+    content: "→";
+    position: absolute; top: 1.5rem; right: -1rem;
+    transform: translateY(-50%);
+    color: var(--green-700); font-size: 1.6rem; line-height: 1;
+  }
+}
+.step__num {
+  width: 3rem; height: 3rem; margin: 0 auto .75rem;
+  border-radius: 9999px; background: var(--green-900); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-heading); font-size: 1.25rem;
+}
+.step__label { font-weight: 600; color: var(--ink); font-size: .95rem; line-height: 1.4; }
+.steps-text { max-width: 44rem; margin: 0 auto; text-align: center; }
+
+/* "Recenzie" */
+.reviews { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+@media (min-width: 768px) { .reviews { grid-template-columns: repeat(3, 1fr); } }
+.review {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); padding: 1.75rem;
+}
+.review__quote { color: rgba(44,44,44,.8); line-height: 1.7; font-style: italic; margin-bottom: 1rem; }
+.review__author { font-size: .875rem; font-weight: 600; color: var(--green-700); }
+
+/* "Časté otázky" — native <details> accordion */
+.faq { max-width: 48rem; margin: 0 auto; }
+.faq details { border-bottom: 1px solid var(--border); }
+.faq summary {
+  cursor: pointer; list-style: none; padding: 1.15rem 0;
+  font-weight: 500; color: var(--ink); font-size: 1.02rem;
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--green-700); font-size: 1.4rem; line-height: 1; }
+.faq details[open] summary::after { content: "\2013"; }
+.faq details p { color: rgba(44,44,44,.7); line-height: 1.7; padding: 0 0 1.15rem; font-size: .95rem; }
