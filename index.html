@@ -15,6 +15,7 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#2d5016">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
   <!-- Open Graph / social sharing previews -->
   <meta property="og:type" content="website">
@@ -60,8 +61,10 @@
   <!-- ===== NAVIGATION ===== -->
   <nav class="nav" id="nav">
     <div class="container nav__inner">
-      <!-- ✏️ TEXT: brand name (top-left) -->
-      <a href="#uvod" class="nav__logo">uzdravenie.sk</a>
+      <a href="#uvod" class="nav__logo" aria-label="uzdravenie.sk – domov">
+        <img src="images/logo-uzdravenie-white.png" alt="uzdravenie.sk" width="702" height="180" class="nav__logo-img nav__logo-img--light">
+        <img src="images/logo-uzdravenie-green.png" alt="" aria-hidden="true" width="702" height="180" class="nav__logo-img nav__logo-img--dark">
+      </a>
 
       <!-- ✏️ TEXT: menu links -->
       <div class="nav__links">
@@ -419,8 +422,8 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__col">
-          <!-- ✏️ TEXT: footer brand + tagline -->
-          <h3 class="footer__brand">uzdravenie.sk</h3>
+          <img src="images/logo-uzdravenie-white.png" alt="uzdravenie.sk" width="702" height="180" class="footer__logo">
+          <!-- ✏️ TEXT: footer tagline -->
           <p class="footer__about">Sprevádzam ľudí na ceste k vnútornej harmónii a rovnováhe tela, mysle a životného priestoru.</p>
         </div>
         <div class="footer__col">
