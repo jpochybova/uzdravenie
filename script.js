@@ -42,10 +42,11 @@
      ------------------------------------------------------------ */
   var form = document.getElementById("contact-form");
   var status = document.getElementById("form-status");
+  var FALLBACK =
+    "Správu sa nepodarilo odoslať. Skúste to prosím znova, alebo mi napíšte " +
+    "priamo na jela.sinkova@gmail.com či zavolajte na +421 903 737 720.";
   if (form && status && window.fetch) {
     form.addEventListener("submit", function (e) {
-      // If the endpoint hasn't been configured yet, let it submit normally.
-      if (form.action.indexOf("YOUR_FORM_ID") !== -1) return;
       e.preventDefault();
       var btn = form.querySelector('button[type="submit"]');
       var label = btn.textContent;
@@ -65,12 +66,12 @@
             status.textContent = "Ďakujem! Vaša správa bola odoslaná, čoskoro sa vám ozvem.";
             status.classList.add("is-success");
           } else {
-            status.textContent = "Správu sa nepodarilo odoslať. Skúste to prosím znova alebo mi napíšte na info@uzdravenie.sk.";
+            status.textContent = FALLBACK;
             status.classList.add("is-error");
           }
         })
         .catch(function () {
-          status.textContent = "Správu sa nepodarilo odoslať. Skúste to prosím znova alebo mi napíšte na info@uzdravenie.sk.";
+          status.textContent = FALLBACK;
           status.classList.add("is-error");
         })
         .finally(function () {

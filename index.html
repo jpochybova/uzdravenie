@@ -8,11 +8,8 @@
   <title>uzdravenie — Vedomá cesta k harmónii | Holistické sprevádzanie</title>
   <meta name="description" content="Holistické sprevádzanie na ceste k vnútornej harmónii a rovnováhe tela, mysle a životného priestoru. Individuálne sedenia osobne aj online.">
   <meta name="author" content="uzdravenie">
-  <!-- ⚙️ GO-LIVE: this is the PREVIEW site (nove.uzdravenie.sk). When approved and
-       moved to uzdravenie.sk, change robots to "index, follow", update the canonical
-       and og/twitter URLs to https://uzdravenie.sk/, and see README "Go-live switch". -->
-  <link rel="canonical" href="https://nove.uzdravenie.sk/">
-  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://uzdravenie.sk/">
+  <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#2d5016">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -20,15 +17,15 @@
   <!-- Open Graph / social sharing previews -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="sk_SK">
-  <meta property="og:url" content="https://nove.uzdravenie.sk/">
+  <meta property="og:url" content="https://uzdravenie.sk/">
   <meta property="og:site_name" content="uzdravenie">
   <meta property="og:title" content="uzdravenie — Vedomá cesta k harmónii">
   <meta property="og:description" content="Holistické sprevádzanie na ceste k vnútornej harmónii a rovnováhe tela, mysle a životného priestoru.">
-  <meta property="og:image" content="https://nove.uzdravenie.sk/images/hero-nature-misty-forest.webp">
+  <meta property="og:image" content="https://uzdravenie.sk/images/og-uvod.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="uzdravenie — Vedomá cesta k harmónii">
   <meta name="twitter:description" content="Holistické sprevádzanie na ceste k vnútornej harmónii a rovnováhe tela, mysle a životného priestoru.">
-  <meta name="twitter:image" content="https://nove.uzdravenie.sk/images/hero-nature-misty-forest.webp">
+  <meta name="twitter:image" content="https://uzdravenie.sk/images/og-uvod.jpg">
 
   <!-- ===========================================================
        Google Analytics 4 (ID: G-VH6NF1DPX0) with Consent Mode v2.
@@ -343,12 +340,7 @@
 
       <div class="contact">
         <div class="card contact__form-card">
-          <!-- ===========================================================
-               Contact form → Formspree
-               ⚙️ SET-UP: replace YOUR_FORM_ID in the action below with
-               your Formspree form ID (https://formspree.io).
-               =========================================================== -->
-          <form class="contact__form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <form class="contact__form" id="contact-form" action="https://formspree.io/f/mnjeekgq" method="POST">
             <div class="field">
               <label for="name">Meno</label>
               <input type="text" id="name" name="meno" placeholder="Vaše meno" required>
@@ -363,9 +355,10 @@
             </div>
             <!-- anti-spam honeypot (hidden from people, catches bots) -->
             <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+            <input type="hidden" name="_subject" value="Nový dopyt z uzdravenie.sk">
             <!-- GDPR consent -->
             <label class="consent-check">
-              <input type="checkbox" name="suhlas" required>
+              <input type="checkbox" name="suhlas" value="áno, súhlasím so spracovaním osobných údajov" required>
               <span>Súhlasím so spracovaním osobných údajov v súlade so <a href="privacy.html">zásadami ochrany osobných údajov</a>.</span>
             </label>
             <button type="submit" class="btn btn--primary btn--pill btn--block btn--lg">Odoslať správu</button>

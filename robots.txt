@@ -1,3 +1,4 @@
-# PREVIEW/STAGING — do not index. Change to the production version at go-live.
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://uzdravenie.sk/sitemap.xml

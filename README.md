@@ -41,49 +41,48 @@ step-by-step, non-technical guide.
 
 The site is published with **GitHub Pages** from the `main` branch.
 
-> **Current status: PREVIEW.** It is deployed to the subdomain
-> **`nove.uzdravenie.sk`** for owner review, while the existing site stays live
-> on `uzdravenie.sk`. The preview is intentionally **not indexed** by search
-> engines (`noindex` + `robots.txt Disallow: /`).
+> **Current status: LIVE** on the production domain **`uzdravenie.sk`**.
+> Search engines are allowed to index the site (`index, follow` +
+> `robots.txt Allow: /`). `privacy.html` and `404.html` stay `noindex`
+> on purpose.
 
 1. Push this repository to GitHub (public).
 2. **Settings → Pages** → *Source*: `Deploy from a branch` → Branch: `main`,
    Folder: `/ (root)` → **Save**.
-3. Custom domain comes from the `CNAME` file (currently `nove.uzdravenie.sk`).
-   At the DNS provider, add **one record** (the apex `uzdravenie.sk` is left
-   untouched, so the old site keeps running):
-   - `nove` → `CNAME` → `<username>.github.io`
-4. In **Settings → Pages**, enable **Enforce HTTPS**.
+3. Custom domain comes from the `CNAME` file (`uzdravenie.sk`). At the DNS
+   provider:
+   - apex `uzdravenie.sk` → `A` → `185.199.108.153`, `185.199.109.153`,
+     `185.199.110.153`, `185.199.111.153`
+   - `www` → `CNAME` → `<username>.github.io`
+
+   > ⚠️ **Only replace the `A`/`CNAME` records that point at the old web host.**
+   > The domain also carries `MX` records (`mailin1.uzdravenie.sk`,
+   > `mailin2.uzdravenie.sk`) plus the `A` records those hostnames resolve to —
+   > deleting them silently kills e-mail on the domain.
+4. In **Settings → Pages**, enable **Enforce HTTPS** (available once GitHub has
+   issued the certificate — usually within an hour of the DNS change).
 
 Every commit to `main` redeploys automatically within a minute.
 
-## Go-live switch (when the owner approves)
+### After the switch to production
 
-To move from the preview subdomain to production `uzdravenie.sk`:
+- Remove the now-unused `nove` DNS record — GitHub Pages serves only the one
+  domain in `CNAME`, and a dangling CNAME to `github.io` is a takeover risk.
+- **GA4** → *Admin → Data Streams* → set the stream URL to `uzdravenie.sk`.
+- **Search Console** → add the `uzdravenie.sk` property and submit
+  `https://uzdravenie.sk/sitemap.xml`.
 
-1. **`CNAME`** → change to `uzdravenie.sk`.
-2. **`index.html`** → set `<meta name="robots">` to `index, follow`; change the
-   `canonical` and all `og:`/`twitter:` URLs from `https://nove.uzdravenie.sk/`
-   to `https://uzdravenie.sk/`.
-3. **`robots.txt`** → replace the `Disallow: /` block with:
-   ```
-   User-agent: *
-   Allow: /
-   Disallow: /privacy.html
-   Sitemap: https://uzdravenie.sk/sitemap.xml
-   ```
-4. **`sitemap.xml`** → change `<loc>` to `https://uzdravenie.sk/`.
-5. **DNS** → point the apex `uzdravenie.sk` at GitHub Pages
-   (`A` records `185.199.108.153`, `185.199.109.153`, `185.199.110.153`,
-   `185.199.111.153`) and `www` → `CNAME` → `<username>.github.io`. Remove the
-   old host's records.
+## Contact form
 
-## Before go-live (set-up placeholders)
+Posts to Formspree (`https://formspree.io/f/mnjeekgq`) via the AJAX handler in
+`script.js` — no third-party script on the page. The free plan allows **50
+submissions/month** and delivers to **one** recipient; the second recipient gets
+a copy through a Gmail filter that forwards mail with the subject
+`Nový dopyt z uzdravenie.sk` (set by the `_subject` hidden field).
 
-- Set the **Google Analytics 4** Measurement ID in `index.html`
-  (replace `G-XXXXXXXXXX`, appears twice).
-- Set the **contact-form endpoint** in the `<form>` in `index.html`
-  (replace `YOUR_FORM_ID`).
-- Fill the operator details in `privacy.html`.
+The `_gotcha` honeypot field catches bots — Formspree drops those submissions
+without counting them against the monthly limit.
 
-Details for all of these are in **[MAINTAINER.md](MAINTAINER.md)**.
+Google Analytics 4 (`G-VH6NF1DPX0`, consent-gated) and the operator details in
+`privacy.html` are already configured. See **[MAINTAINER.md](MAINTAINER.md)**
+for the non-technical guide.

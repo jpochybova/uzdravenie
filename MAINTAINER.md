@@ -10,7 +10,9 @@ install anything** — everything is done in your web browser on GitHub.
 - The website is made of a few text files stored here on GitHub.
 - When you **edit a file and save (commit)** it, the live site at
   **https://uzdravenie.sk** updates **automatically within about a minute**.
-- The main file with all the visible text is **`index.html`**.
+- The main file is **`index.html`** (the one-page front page). The other pages
+  have their own files, named after what they contain — `o-mne.html`,
+  `metody.html`, `metoda-*.html`, `cennik-*.html`, `blog*.html`.
 
 ---
 
@@ -34,15 +36,19 @@ install anything** — everything is done in your web browser on GitHub.
 > `<h3>` and `</h3>` untouched.
 
 ### Common edits & where to find them
-| What | Search `index.html` for |
-|---|---|
-| Prices | `30 €`, `60 €`, `250 €` |
-| Session durations | `45 minút`, `75 minút` |
-| Phone number | `+421 900 123 456` |
-| E-mail | `info@uzdravenie.sk` |
-| Address / opening hours | `Bratislava` / `Po – Pi` |
-| Headlines & paragraphs | look for `✏️ TEXT:` markers |
-| Social media links | `✏️ LINK: social profiles` |
+| What | Which file | Search for |
+|---|---|---|
+| Phone number | every page (nav + footer) | `+421 903 737 720` |
+| E-mail | every page (nav + footer) | `jela.sinkova@gmail.com` |
+| Town | every page (footer) | `Nedožery-Brezany` |
+| Prices | `cennik-*.html` | the `€` sign |
+| Headlines & paragraphs | `index.html` | the `✏️ TEXT:` markers |
+| Social media links | `index.html` | `✏️ LINK: social profiles` |
+
+> ⚠️ The phone number, e-mail and town are repeated in the footer of **every**
+> page. If you change one, change it everywhere — otherwise visitors will find
+> two different numbers. The e-mail also appears in `script.js` (in the message
+> shown when the contact form fails) and in `privacy.html`.
 
 ---
 
@@ -55,28 +61,30 @@ install anything** — everything is done in your web browser on GitHub.
 
 ---
 
-## One-time set-up (do these once before launch)
+## Set-up
 
-### 1. Connect Google Analytics (GA4)
-1. Create a GA4 property at <https://analytics.google.com> and copy your
-   **Measurement ID** — it looks like `G-ABC123XYZ`.
-2. In **`index.html`**, search for **`G-XXXXXXXXXX`** (it appears **twice**) and
-   replace **both** with your real ID. Commit.
-- Analytics only runs after a visitor clicks **"Prijať"** on the cookie bar
-  (this is required by law).
-- View traffic anytime at <https://analytics.google.com>.
+### The contact form
 
-### 2. Connect the contact form (Formspree)
-1. Create a free account at <https://formspree.io>, add a new form, and copy its
-   endpoint — it looks like `https://formspree.io/f/abcdwxyz`.
-2. In **`index.html`**, search for **`YOUR_FORM_ID`** and replace the whole
-   action URL with your endpoint. Commit.
-- Form submissions will then arrive in your **e-mail** and in the Formspree
-  dashboard. Until this is done, the form won't send.
+Messages go through **Formspree** (free plan) to `jela.sinkova@gmail.com`, and a
+copy is forwarded to the second address by a **Gmail filter** on the subject
+`Nový dopyt z uzdravenie.sk`. Formspree's free plan only delivers to one
+address, which is why the forwarding rule exists — if the subject line in
+`index.html` is ever changed, that filter stops matching and the second person
+stops receiving copies.
 
-### 3. Fill in the privacy policy
-- Open **`privacy.html`** and replace the placeholders in brackets — e.g.
-  `[Meno a priezvisko / názov]`, `[adresa]`, `[IČO]` — with the real details.
+**Limit: 50 messages per month.** Formspree warns you by e-mail at 50 %, 75 %,
+90 % and when the limit is reached. Spam does not count — the form has a hidden
+trap field that Formspree filters out.
+
+> 💡 If messages seem to have stopped arriving, check the **spam folder** first
+> and mark the Formspree notification as "not spam". That is by far the most
+> common reason people think the form is broken.
+
+### Already done — no action needed
+- **Google Analytics 4** is connected (`G-VH6NF1DPX0`). It only runs after a
+  visitor clicks **"Prijať"** on the cookie bar, as the law requires. View
+  traffic at <https://analytics.google.com>.
+- **The privacy policy** in `privacy.html` has the real operator details.
 
 ---
 
