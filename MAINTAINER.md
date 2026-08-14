@@ -39,7 +39,7 @@ install anything** — everything is done in your web browser on GitHub.
 | What | Which file | Search for |
 |---|---|---|
 | Phone number | every page (nav + footer) | `+421 903 737 720` |
-| E-mail | every page (nav + footer) | `jela.sinkova@gmail.com` |
+| E-mail | every page (nav + footer) | `info@uzdravenie.sk` |
 | Town | every page (footer) | `Nedožery-Brezany` |
 | Prices | `cennik-*.html` | the `€` sign |
 | Headlines & paragraphs | `index.html` | the `✏️ TEXT:` markers |
@@ -65,7 +65,8 @@ install anything** — everything is done in your web browser on GitHub.
 
 ### The contact form
 
-Messages go through **Formspree** (free plan) to `jela.sinkova@gmail.com`, and a
+Messages go through **Formspree** (free plan) to `jela.sinkova@gmail.com`
+(`info@uzdravenie.sk`, the address shown on the site, forwards there too), and a
 copy is forwarded to the second address by a **Gmail filter** on the subject
 `Nový dopyt z uzdravenie.sk`. Formspree's free plan only delivers to one
 address, which is why the forwarding rule exists — if the subject line in

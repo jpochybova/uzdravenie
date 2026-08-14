@@ -44,7 +44,7 @@
   var status = document.getElementById("form-status");
   var FALLBACK =
     "Správu sa nepodarilo odoslať. Skúste to prosím znova, alebo mi napíšte " +
-    "priamo na jela.sinkova@gmail.com či zavolajte na +421 903 737 720.";
+    "priamo na info@uzdravenie.sk či zavolajte na +421 903 737 720.";
   if (form && status && window.fetch) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
