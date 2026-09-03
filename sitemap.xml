@@ -95,9 +95,15 @@
   <!-- Blog -->
   <url>
     <loc>https://uzdravenie.sk/blog.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uzdravenie.sk/blog-pribeh-o-dovere.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://uzdravenie.sk/blog-uhorky-bez-deky.html</loc>
