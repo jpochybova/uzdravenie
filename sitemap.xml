@@ -95,9 +95,27 @@
   <!-- Blog -->
   <url>
     <loc>https://uzdravenie.sk/blog.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uzdravenie.sk/blog-ticho-medzi-otcom-a-dcerou.html</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uzdravenie.sk/blog-matka-a-dcera-zrkadla.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://uzdravenie.sk/blog-preco-si-vyberame-rovnakych-partnerov.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://uzdravenie.sk/blog-pribeh-o-dovere.html</loc>
