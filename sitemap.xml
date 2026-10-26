@@ -95,9 +95,15 @@
   <!-- Blog -->
   <url>
     <loc>https://uzdravenie.sk/blog.html</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://uzdravenie.sk/blog-prednaska-bachove-esencie-sucany.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://uzdravenie.sk/blog-podnikanie-neviditelny-strop.html</loc>
